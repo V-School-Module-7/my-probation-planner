@@ -1,8 +1,8 @@
 import React from 'react';
 import LoginScreen from './app/screens/LoginScreen'
 import SignupScreen from './app/screens/SignupScreen'
-import DashboardScreen from './app/screens/DashboardScreen'
-import ForgotPasswordScreen from './app/screens/ForgotPasswordScreen'
+import DashboardScreen from './app/screens/DashBoardScreen'
+import ForgotPasswordScreen from './app/screens/ForgotPasssWordScreen'
 import { NavigationContainer } from '@react-navigation/native'
 import { createStackNavigator } from '@react-navigation/stack'
 
@@ -18,6 +18,7 @@ export default function App() {
         <Stack.Screen name="SignupScreen" component={SignupScreen}/>
         <Stack.Screen name="DashboardScreen" component={DashboardScreen}/>
         <Stack.Screen name="ForgotPasswordScreen" component={ForgotPasswordScreen}/>
+        
       </Stack.Navigator>
     </NavigationContainer>
   );

@@ -3,9 +3,10 @@ import { View, Button, TextInput, Text } from 'react-native'
 import firebase from 'firebase'
 import app from '../config/firebase'
 import * as Google from 'expo-google-app-auth';
-import {IOS_CLIENT_ID, ANDROID_CLIENT_ID} from 'react-native-dotenv'
+import {IOS_CLIENT_ID, ANDROID_CLIENT_ID} from '@env'
 
 export default function SignupScreen(props){
+    console.log(process.env)
     const {navigation} = props
 
     const [firstName, setFirstName] = useState('')
