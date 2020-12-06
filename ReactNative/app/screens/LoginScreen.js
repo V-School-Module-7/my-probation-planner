@@ -4,7 +4,7 @@ import { TextInput } from 'react-native-gesture-handler'
 import firebase from 'firebase'
 import app from '../config/firebase'
 import * as Google from 'expo-google-app-auth';
-import {IOS_CLIENT_ID, ANDROID_CLIENT_ID} from 'react-native-dotenv'
+import {IOS_CLIENT_ID, ANDROID_CLIENT_ID} from '@env'
 
 
 export default function LoginScreen(props){

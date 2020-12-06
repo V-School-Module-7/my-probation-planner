@@ -1,17 +1,16 @@
 import app from 'firebase/app'
 import 'firebase/auth'
 import 'firebase/firebase-firestore'
-import {API_KEY, AUTH_DOMAIN, DATABASE_URL, PROJECT_ID, STORAGE_BUCKET, MESSAGING_SENDER_ID, APP_ID, MEASUREMENT_ID} from 'react-native-dotenv'
+import {API_KEY, AUTH_DOMAIN, DATABASE_URL, PROJECT_ID, STORAGE_BUCKET, MESSAGING_SENDER_ID, APP_ID, MEASUREMENT_ID} from '@env'
 
 const firebaseConfig = {
-    apiKey: API_KEY,
-    authDomain: AUTH_DOMAIN,
-    databaseURL: DATABASE_URL,
-    projectId: PROJECT_ID,
-    storageBucket: STORAGE_BUCKET,
-    messagingSenderId: MESSAGING_SENDER_ID,
-    appId: APP_ID,
-    measurementId: MEASUREMENT_ID
+  apiKey: "AIzaSyA90TxhPn0H-hPzn96KJnnpXOc9Pq0q6OY",
+  authDomain: "probation-planner-a0406.firebaseapp.com",
+  databaseURL: "https://probation-planner-a0406.firebaseio.com",
+  projectId: "probation-planner-a0406",
+  storageBucket: "probation-planner-a0406.appspot.com",
+  messagingSenderId: "94393770827",
+  appId: "1:94393770827:web:975046c0e064589d687ece"
 }
 
 class Firebase{
