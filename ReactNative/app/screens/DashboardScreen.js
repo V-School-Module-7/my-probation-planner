@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { ImageBackground, Text, Button, StyleSheet, View } from 'react-native'
 import { FlatList } from 'react-native-gesture-handler'
 
-export default function HomeScreen(props){
+export default function DashboardScreen(props){
 const [quoteState, setQuoteState] = useState('')
 const [randomQuote, setRandomQuote] = useState('')
 
