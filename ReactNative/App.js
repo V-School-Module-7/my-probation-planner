@@ -1,28 +1,39 @@
-import React from 'react';
-import LoginScreen from './app/screens/LoginScreen'
-import SignupScreen from './app/screens/SignupScreen'
-import DashboardScreen from './app/screens/DashboardScreen'
+import React, { useState } from 'react';
+import Auth from './app/screens/Auth'
 import Application from './app/screens/Application'
-import ForgotPasswordScreen from './app/screens/ForgotPasssWordScreen'
+
 import { NavigationContainer } from '@react-navigation/native'
 import { createStackNavigator } from '@react-navigation/stack'
-
+import * as SecureStore from 'expo-secure-store';
 
 const Stack = createStackNavigator()
 
 
 export default function App() {
+  const [hasToken, setHasToken] = useState(false) 
+    //will change to grabbing from local storage once connections have been fixed and figured out
+    //once set up to check from local storage, will no longer need to pass down function????!!!
+    
+
+    //secure store is not quite moving the info how I want it. is it not sending? is it not grabbing? find youtube tutorial, perhaps. maybe other way to store.
+
+    // SecureStore is one way I have been trying to securely store info (hopefully token eventually)
+
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="LoginScreen">
-        <Stack.Screen name="LoginScreen" component={LoginScreen}/>
-        <Stack.Screen name="SignupScreen" component={SignupScreen}/>
-        <Stack.Screen name="DashboardScreen" component={Application}/>
-        <Stack.Screen name="ForgotPasswordScreen" component={ForgotPasswordScreen}/>
-        
-      </Stack.Navigator>
+      {
+        !hasToken //will be grabbed from storage
+        ?
+        <Auth />
+        :
+        <Application />
+      }
     </NavigationContainer>
   );
 }
 
 
+// holds navigation between auth file and Application file
+//switch nav
+//check if you have token (logged in). if yes, display Application, if not, display Auth
+//have log in buttons switch to Application. Have log out buttons switch to Auth
