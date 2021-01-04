@@ -16,8 +16,11 @@ export default function LoginScreen(props){
 
     async function login(){
         try{
-            app.login(email, password)
-            navigation.navigate("DashboardScreen")
+            let user = await app.login(email, password) 
+            if (user) {
+              navigation.navigate("DashboardScreen")
+              
+            }
         } catch(err){
             alert(err.message)
         }

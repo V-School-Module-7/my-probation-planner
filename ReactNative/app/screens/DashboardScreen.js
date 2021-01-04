@@ -26,9 +26,6 @@ const randomNumber = () => {
         <ImageBackground style = {styles.background}>
             <Button onPress={randomNumber} title='Quote of the Day'/>
             <Text>{randomQuote.author} {randomQuote.text}</Text>
-            <View style={styles.contactButton}>
-                <Button title='Contacts'/>
-            </View>
             <Button style={styles.contactButton} title='Community Service Information'/>
             <Button style={styles.contactButton} title='Countdown for Days Sober'/>
             <Button style={styles.contactButton} title='Goal Tracking'/>
