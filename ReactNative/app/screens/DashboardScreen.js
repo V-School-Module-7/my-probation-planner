@@ -3,8 +3,11 @@ import { ImageBackground, Text, Button, StyleSheet, View } from 'react-native'
 import { FlatList } from 'react-native-gesture-handler'
 
 export default function DashboardScreen(props){
-const [quoteState, setQuoteState] = useState(['Always surround yourself with people who lift and inspire you. They remind us not to live in the past!','High protein and adequate liquid intake make for a successful UA! Do you test today?' ,
-'Embrace the fact that you’ve overcome some serious obstacles that most can’t even comprehend.. Be someone for others to reach out to in their difficult times!', 'We spent years in our addiction so sobriety won’t happen overnight. Remember “One Day at a Time”']
+const [quoteState, setQuoteState] = useState(
+['Always surround yourself with people who lift and inspire you. They remind us not to live in the past!',
+'High protein and adequate liquid intake make for a successful UA! Do you test today?' ,
+'Embrace the fact that you’ve overcome some serious obstacles that most can’t even comprehend. Be someone for others to reach out to in their difficult times!', 
+'We spent years in our addiction so sobriety won’t happen overnight. Remember “One Day at a Time”']
 )
 const [randomQuote, setRandomQuote] = useState('')
 
